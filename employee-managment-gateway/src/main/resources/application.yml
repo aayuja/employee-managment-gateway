@@ -8,11 +8,11 @@ spring:
     gateway:
      routes:
       - id: employee-microservice
-        uri: http://localhost:8280/
+        uri: lb://employee-microservice
         predicates:
          - Path=/empl/**,/leav/**,/pays/**,/sala/**,/timeshe/**
       - id: admin-microservice
-        uri: http://localhost:8180/
+        uri: lb://admin-microservice
         predicates:
          - Path=/admine/**,/adminl/**,/adminp/**,/admins/**,/admint/**
       - id: google
