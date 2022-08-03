@@ -15,6 +15,12 @@ spring:
         uri: lb://admin-microservice
         predicates:
          - Path=/admine/**,/adminl/**,/adminp/**,/admins/**,/admint/**
+         
+      - id: employee-front-end
+        uri: lb://employee-front-end
+        predicates:
+         - Path=/emp/**
+         
       - id: google
         uri: http://www.google.com
         predicates:
